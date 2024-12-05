@@ -26,6 +26,28 @@
     },
     "description": {
       "type": "text"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "content_city": {
+      "type": "richtext"
+    },
+    "listing": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::listing.listing",
+      "inversedBy": "categories"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Condition",
+        "Insurance",
+        "Clientle",
+        "Method",
+        "Care"
+      ]
     }
   }
 }
